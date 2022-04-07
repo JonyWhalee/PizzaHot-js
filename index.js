@@ -25,7 +25,37 @@
   ]
 
   pizzeria = pizzeria.concat(productos);
-   // pizzeria.push(productos);
   let nombreIngresado = prompt("Ingresa el tipo de pizza que esta buscando...");
   let productoEncontrado = pizzeria.filter((producto)=>producto.nombre.indexOf(nombreIngresado)!==-1);
   console.log(productoEncontrado);
+
+  init();
+
+  function init()
+  {
+    saludar();
+    mostraropciones();
+    mensaje();
+  }
+  function saludar()
+  {
+    let nombre = prompt("Ingresa tu nombre");
+    let myTytle = document.getElementById("title");
+    myTytle.innerHTML = `Bueno dias ${nombre}`
+  }
+  function mostraropciones()
+  {
+    pizzeria.forEach((pizza) => {
+      let myBtn = document.createElement("button");
+      myBtn.setAttribute("class", "btn")
+      myBtn.innerHTML = pizza.nombre;
+      document.body.appendChild(myBtn);
+    });
+  }
+  function mensaje()
+  {
+    let mensaje = document.createElement("p");
+    mensaje.innerHTML = "Elegir una Pizza:"
+    document.body.appendChild(mensaje);
+  }
+  
