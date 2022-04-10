@@ -41,11 +41,11 @@
   {
     let nombre = prompt("Ingresa tu nombre");
     let myTytle = document.getElementById("title");
-    myTytle.innerHTML = `Bueno dias ${nombre}`
+    myTytle.innerHTML = `Bueno dias ${nombre}, estas son las pizzas que estas buscando?`
   }
   function mostraropciones()
   {
-    pizzeria.forEach((pizza) => {
+    productoEncontrado.forEach((pizza) => {
       let myBtn = document.createElement("button");
       myBtn.setAttribute("class", "btn")
       myBtn.innerHTML = pizza.nombre;
