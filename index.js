@@ -1,3 +1,11 @@
+  function saludar()
+  {
+    let nombre = prompt("Ingresa tu nombre");
+    let myTytle = document.getElementById("title");
+    myTytle.innerHTML = `Bueno dias ${nombre}, estas son las pizzas que estas buscando?`
+  }
+  saludar();
+
   let pizzeria = []
   class Pizzas{
     constructor(id, nombre, precio)
@@ -30,32 +38,25 @@
   console.log(productoEncontrado);
 
   init();
-
   function init()
   {
-    saludar();
-    mostraropciones();
+    mostrarOpciones();
     mensaje();
   }
-  function saludar()
-  {
-    let nombre = prompt("Ingresa tu nombre");
-    let myTytle = document.getElementById("title");
-    myTytle.innerHTML = `Bueno dias ${nombre}, estas son las pizzas que estas buscando?`
-  }
-  function mostraropciones()
+  function mostrarOpciones()
   {
     productoEncontrado.forEach((pizza) => {
       let myBtn = document.createElement("button");
       myBtn.setAttribute("class", "btn")
       myBtn.innerHTML = pizza.nombre;
+      myBtn.addEventListener("click", ()=> alert(pizza.precio));
       document.body.appendChild(myBtn);
     });
   }
   function mensaje()
   {
     let mensaje = document.createElement("p");
-    mensaje.innerHTML = "Elegir una Pizza:"
+    mensaje.innerHTML = "Toca para saber el precio."
     document.body.appendChild(mensaje);
   }
   
