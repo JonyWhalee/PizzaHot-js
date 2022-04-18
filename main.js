@@ -5,7 +5,7 @@ function init()
   // saludar();
   botonMenor();
   botonMayor();
-  mostrarPizza();
+  mostrarPizzas();
 
 }
 
@@ -38,7 +38,6 @@ function botonMayor()
     document.body.append(btnMayor);
   }
 
-
 function ordenarMenor()
 {
   let ordenarMenor = pizzeria.sort((p1, p2) =>
@@ -52,7 +51,7 @@ function ordenarMenor()
       return 1;
     }
   });
-  console.log(ordenarMenor)
+  mostrarPizzas();
 }
 
 function ordenarMayor()
@@ -68,19 +67,79 @@ function ordenarMayor()
       return 1;
     }
   });
-  console.log(ordenarMayor);
+  mostrarPizzas();
 }
-
-function mostrarPizza()
+function mostrarPizzas()
   {
-    let nodoLista = document.createElement("ul");
-    pizzeria.forEach(element => {
+    let nodoLista = document.getElementById ("listaPizzeria");
+    if(!nodoLista)
+    {
+      nodoLista = document.createElement("ul");
+      nodoLista.setAttribute("id", "listaPizzeria");
+    }
+    nodoLista.innerHTML = ""
+
+    pizzeria.forEach(element => 
+    {
       let nodoElemento = document.createElement("li");
-      nodoElemento.innerHTML = `${element.nombre} <br><br> <img class="photo" src="${element.img}"> <br>`
-      nodoLista.appendChild(nodoElemento);  
+      let nombre = `<h1>${element.nombre}</h1>
+                    <img class="photo" src="${element.img}">
+                    `;
+    nodoElemento.innerHTML = `${nombre} <button onclick="decirPrecio('${element.precio}')"> Precio </button>`;
+    nodoLista.appendChild(nodoElemento);  
     });
     document.body.append(nodoLista);
   }
+  // decirPrecio();
+
+  // Franco borre muchas veces el codigo... intente de varias formas de agregar un boton que al tocarlo me diga un precio de la pizza... pero me imprimia todos los precios. 
+  // ahora me salta un error en el html o algo asi... capaz sea una boludes, pero esty bloqueado jajaja
+  // Y por ultimo si tengo que sacar los prompt... agrego datos x inputs?
+
+
+
+
+
+
+
+
+// function mostrarPizzas()
+//   {
+//     let nodoLista = document.getElementById ("listaPizzeria");
+//     if(!nodoLista)
+//     {
+//       nodoLista = document.createElement("ul");
+//       nodoLista.setAttribute("id", "listaPizzeria");
+//     }
+//     nodoLista.innerHTML = ""
+
+//     pizzeria.forEach(element => 
+//     {
+//       let nodoElemento = document.createElement("li");
+//       nodoElemento.innerHTML = `${element.nombre} <br><br> <img class="photo" src="${element.img}"> <br> <button id="precio"> Precio </button> <br><br>`;
+//       nodoLista.appendChild(nodoElemento);  
+//     });
+//     document.body.append(nodoLista);
+//   }
+
+// let btn = document.querySelector("#btn-precio");
+// btn.addEventListener("click", () =>mostrarPrecio());
+
+// function mostrarPrecio()
+// {
+//   let precio = document.querySelector("#precio");
+//   pizzeria.forEach(element => {
+//     let nodoDiv = document.createElement("div");
+//     nodoDiv.innerHTML = `${element.precio}`;
+//     precio.appendChild(nodoDiv);
+//   })
+// }
+
+// mostrarPrecio();
+
+
+
+  
 
   // class Pizzas{
   //   constructor(id, nombre, precio)
