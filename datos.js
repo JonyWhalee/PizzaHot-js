@@ -11,3 +11,5 @@ let pizzeria = [
     {id:10, nombre:"Barbacoa", precio: 1250, img:"https://static.guiainfantil.com/media/6084/c/pizza-barbacoa-un-clasico-para-ninos-md.jpg"},
     {id:11, nombre:"Diávola", precio: 1450, img: "https://www.silviocicchi.com/pizzachef/wp-content/uploads/2015/03/d2.jpg"}
 ]
+    localStorage.setItem("datosGuardados", JSON.stringify(pizzeria));
+    let misDatosGuardados = JSON.parse(localStorage.getItem("datosGuardados"));
