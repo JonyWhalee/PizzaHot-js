@@ -8,12 +8,27 @@ function init()
   mostrarPizzas();
 
 }
+let lugar = " ";
+
+function opcionId3()
+  {
+    lugar = "llevarse el pedido.";
+  }
+function opcionId4()
+  {
+    lugar = "comen acá.";
+  }
+
 
 function saludar()
   {
-    let nombre = prompt("Ingresa tu nombre");
-    let myTytle = document.getElementById("title");
-    myTytle.innerHTML = `Bueno dias ${nombre}, estas son las pizzas que estas buscando?`
+    let nombreIngresado = document.getElementById("id1").value;
+    let myTytle = document.getElementById("title");  
+    myTytle.innerHTML = `Bueno dias ${nombreIngresado}, asi que van a ${lugar}`
+  }
+function mostrarInputs()
+  {
+    saludar();
   }
 
 function botonMenor()
@@ -62,7 +77,7 @@ function ordenarMayor()
     {
       return -1;
     } 
-    else
+    else 
     {
       return 1;
     }
@@ -85,27 +100,24 @@ function mostrarPizzas()
       let nombre = `<h1>${element.nombre}</h1>
                     <img class="photo" src="${element.img}">
                     `;
-    nodoElemento.innerHTML = `${nombre} <button onclick="decirPrecio('${element.precio}')"> Precio </button>`;
+    nodoElemento.innerHTML = ` ${nombre} <button id="x-${element.id}" onclick='functionX(this);'> Precio </button>`;
     nodoLista.appendChild(nodoElemento);  
     });
     document.body.append(nodoLista);
   }
-  // decirPrecio();
 
-  // Franco borre muchas veces el codigo... intente de varias formas de agregar un boton que al tocarlo me diga un precio de la pizza... pero me imprimia todos los precios. 
-  // ahora me salta un error en el html o algo asi... capaz sea una boludes, pero esty bloqueado jajaja
-  // Y por ultimo si tengo que sacar los prompt... agrego datos x inputs?
-
-
-
-
-
-
+  function functionX (element)
+  {
+  let elementId = element.getAttribute('id').match(/\d+/g).join('')
+  let id = Number(elementId)
+  let precio = pizzeria.find(info => info.id == id).precio
+        element.innerHTML = `Este es el precio : ${precio}`
+  }
 
 
 // function mostrarPizzas()
 //   {
-//     let nodoLista = document.getElementById ("listaPizzeria");
+//     let nodoLista = document.getElementById ("listaPizzeria"); 
 //     if(!nodoLista)
 //     {
 //       nodoLista = document.createElement("ul");
@@ -121,6 +133,8 @@ function mostrarPizzas()
 //     });
 //     document.body.append(nodoLista);
 //   }
+
+
 
 // let btn = document.querySelector("#btn-precio");
 // btn.addEventListener("click", () =>mostrarPrecio());
@@ -168,6 +182,8 @@ function mostrarPizzas()
 
   // pizzeria = pizzeria.concat(productos);
   // let nombreIngresado = prompt("Ingresa el tipo de pizza que esta buscando...");
+
+
   // let productoEncontrado = pizzeria.filter((producto)=>producto.nombre.indexOf(nombreIngresado)!==-1);
   // console.log(productoEncontrado);
 
@@ -187,6 +203,7 @@ function mostrarPizzas()
   //     document.body.appendChild(myBtn);
   //   });
   // }
+
   // function mensaje()
   // {
   //   let mensaje = document.createElement("p");
