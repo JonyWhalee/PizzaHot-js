@@ -12,19 +12,19 @@ let lugar = " ";
 
 function opcionId3()
   {
-    lugar = "llevarse el pedido. Genial!!";
+    lugar = "asi que va a llevarse el pedido. Genial!!";
   }
 function opcionId4()
   {
-    lugar = "comen aqui. Buenisimo acompañenme...";
+    lugar = `buenisimo asi que van a comer acá. Siganme!`;
   }
 
 function saludar()
   {
     let nombreIngresado = document.getElementById("id1").value;
-    let myTytle = document.getElementById("title");  
-    myTytle.innerHTML = `Buenos dias ${nombreIngresado}, asi que van a ${lugar}`
-  }
+    let myTytle = document.getElementById("title");
+    let a = (nombreIngresado === "") ? myTytle.innerHTML = `No ingresaste los datos solicitados` : myTytle.innerHTML = `Buenos dias ${nombreIngresado}, ${lugar}`
+}
   
 function mostrarInputs()
   {
@@ -34,7 +34,7 @@ function mostrarInputs()
 function mensaje()
   {
     let mensaje = document.createElement("p");
-    mensaje.innerHTML = "Acá tienes todas las opcciones del dia de hoy!"
+    mensaje.innerHTML = `Acá tienes todas las opcciones del dia de hoy!`
     document.body.appendChild(mensaje);
   }
 
@@ -113,8 +113,7 @@ function mostrarPizzas()
     });
     document.body.append(nodoLista);
   }
-
-  function functionX (element)
+function functionX (element)
   {
   let elementId = element.getAttribute('id').match(/\d+/g).join('')
   let id = Number(elementId)
