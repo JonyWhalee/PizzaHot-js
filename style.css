@@ -15,7 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 body{
     background-color: #000;
@@ -47,8 +47,9 @@ nav{
 .nav-links a{
     color: #f3f3f3df;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 900;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .nav-links{
     position: absolute;
@@ -62,7 +63,7 @@ nav{
     align-items: center;
     width: 30%;
     transform: translateX(100%);  
-    transition: transform 0.5 ease-in;  
+    transition: transform 0.5s ease-in;  
 }
 .nav-links li{
     opacity: 0;
@@ -74,10 +75,31 @@ nav{
     background-color: var(--color3);
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease ;
 }
 .nav-active{
     transform: translateX(0%);
 }
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{ 
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
 
 
 
