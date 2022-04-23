@@ -1,122 +1,122 @@
-init();
+// init();
 
-function init()
-{
-  mensaje();
-  botonMenor();
-  botonMayor();
-  mostrarPizzas();
+// function init()
+// {
+//   mensaje();
+//   botonMenor();
+//   botonMayor();
+//   mostrarPizzas();
 
-}
-let lugar = " ";
+// }
+// let lugar = " ";
 
-function opcionId3()
-  {
-    lugar = "asi que va a llevarse el pedido. Genial!!";
-  }
-function opcionId4()
-  {
-    lugar = `buenisimo asi que van a comer acá. Siganme!`;
-  }
+// function opcionId3()
+//   {
+//     lugar = "asi que va a llevarse el pedido. Genial!!";
+//   }
+// function opcionId4()
+//   {
+//     lugar = `buenisimo asi que van a comer acá. Siganme!`;
+//   }
 
-function saludar()
-  {
-    let nombreIngresado = document.getElementById("id1").value;
-    let myTytle = document.getElementById("title");
-    let a = (nombreIngresado === "") ? myTytle.innerHTML = `No ingresaste los datos solicitados` : myTytle.innerHTML = `Buenos dias ${nombreIngresado}, ${lugar}`
-}
+// function saludar()
+//   {
+//     let nombreIngresado = document.getElementById("id1").value;
+//     let myTytle = document.getElementById("title");
+//     let a = (nombreIngresado === "") ? myTytle.innerHTML = `No ingresaste los datos solicitados` : myTytle.innerHTML = `Buenos dias ${nombreIngresado}, ${lugar}`
+// }
   
-function mostrarInputs()
-  {
-    saludar();
-  }
+// function mostrarInputs()
+//   {
+//     saludar();
+//   }
 
-function mensaje()
-  {
-    let mensaje = document.createElement("p");
-    mensaje.innerHTML = `Acá tienes todas las opcciones del dia de hoy!`
-    document.body.appendChild(mensaje);
-  }
+// function mensaje()
+//   {
+//     let mensaje = document.createElement("p");
+//     mensaje.innerHTML = `Acá tienes todas las opcciones del dia de hoy!`
+//     document.body.appendChild(mensaje);
+//   }
 
-function botonMenor()
-  {
-    let btnMenor = document.createElement("button");
-    btnMenor.innerHTML="Menor Precio"
-    btnMenor.addEventListener("click", ()=>
-    {
-      ordenarMenor();
-    });
-    document.body.append(btnMenor);
-  }
+// function botonMenor()
+//   {
+//     let btnMenor = document.createElement("button");
+//     btnMenor.innerHTML="Menor Precio"
+//     btnMenor.addEventListener("click", ()=>
+//     {
+//       ordenarMenor();
+//     });
+//     document.body.append(btnMenor);
+//   }
 
-function botonMayor() 
-  {
-    let btnMayor = document.createElement("button");
-    btnMayor.innerHTML="Mayor Precio"
-    btnMayor.addEventListener("click", ()=>
-    {
-      ordenarMayor();
-    });
-    document.body.append(btnMayor);
-  }
+// function botonMayor() 
+//   {
+//     let btnMayor = document.createElement("button");
+//     btnMayor.innerHTML="Mayor Precio"
+//     btnMayor.addEventListener("click", ()=>
+//     {
+//       ordenarMayor();
+//     });
+//     document.body.append(btnMayor);
+//   }
 
-function ordenarMenor()
-{
-  let ordenarMenor = pizzeria.sort((p1, p2) =>
-  {
-    if(p1.precio < p2.precio)
-    {
-      return -1;
-    } 
-    else
-    {
-      return 1;
-    }
-  });
-  mostrarPizzas();
-}
+// function ordenarMenor()
+// {
+//   let ordenarMenor = pizzeria.sort((p1, p2) =>
+//   {
+//     if(p1.precio < p2.precio)
+//     {
+//       return -1;
+//     } 
+//     else
+//     {
+//       return 1;
+//     }
+//   });
+//   mostrarPizzas();
+// }
 
-function ordenarMayor()
-{
-  let ordenarMayor = pizzeria.sort((p1, p2) =>
-  {
-    if(p1.precio > p2.precio)
-    {
-      return -1;
-    } 
-    else 
-    {
-      return 1;
-    }
-  });
-  mostrarPizzas();
-}
+// function ordenarMayor()
+// {
+//   let ordenarMayor = pizzeria.sort((p1, p2) =>
+//   {
+//     if(p1.precio > p2.precio)
+//     {
+//       return -1;
+//     } 
+//     else 
+//     {
+//       return 1;
+//     }
+//   });
+//   mostrarPizzas();
+// }
 
-function mostrarPizzas()
-  {
-    let nodoLista = document.getElementById ("listaPizzeria");
-    if(!nodoLista)
-    {
-      nodoLista = document.createElement("ul");
-      nodoLista.setAttribute("id", "listaPizzeria");
-    }
-    nodoLista.innerHTML = ""
+// function mostrarPizzas()
+//   {
+//     let nodoLista = document.getElementById ("listaPizzeria");
+//     if(!nodoLista)
+//     {
+//       nodoLista = document.createElement("ul");
+//       nodoLista.setAttribute("id", "listaPizzeria");
+//     }
+//     nodoLista.innerHTML = ""
 
-    pizzeria.forEach(element => 
-    {
-      let nodoElemento = document.createElement("li");
-      let nombre = `<h1>${element.nombre}</h1>
-                    <img class="photo" src="${element.img}">
-                    `;
-    nodoElemento.innerHTML = ` ${nombre} <button id="x-${element.id}" onclick='functionX(this);'> Precio </button>`;
-    nodoLista.appendChild(nodoElemento);  
-    });
-    document.body.append(nodoLista);
-  }
-function functionX (element)
-  {
-  let elementId = element.getAttribute('id').match(/\d+/g).join('')
-  let id = Number(elementId)
-  let precio = pizzeria.find(pizza => pizza.id == id).precio
-        element.innerHTML = `Este es el precio : $${precio}`
-  }
+//     pizzeria.forEach(element => 
+//     {
+//       let nodoElemento = document.createElement("li");
+//       let nombre = `<h1>${element.nombre}</h1>
+//                     <img class="photo" src="${element.img}">
+//                     `;
+//     nodoElemento.innerHTML = ` ${nombre} <button id="x-${element.id}" onclick='functionX(this);'> Precio </button>`;
+//     nodoLista.appendChild(nodoElemento);  
+//     });
+//     document.body.append(nodoLista);
+//   }
+// function functionX (element)
+//   {
+//   let elementId = element.getAttribute('id').match(/\d+/g).join('')
+//   let id = Number(elementId)
+//   let precio = pizzeria.find(pizza => pizza.id == id).precio
+//         element.innerHTML = `Este es el precio : $${precio}`
+//   }
