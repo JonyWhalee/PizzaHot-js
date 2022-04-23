@@ -26,7 +26,7 @@ btnRight.addEventListener("click", ()=>{
 
 function left(){
     let sliderSection = document.querySelectorAll(".slider__selection");[0];
-    let sliderSectionLastLast = sliderSection[sliderSection.length -1];
+    let sliderSectionLast = sliderSection[sliderSection.length -1];
     slider.style.marginLeft = "0%";
     slider.style.transition = "all 0.7s"
     setTimeout(()=>{
