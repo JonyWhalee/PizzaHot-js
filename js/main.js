@@ -25,7 +25,6 @@
 //     let myTytle = document.getElementById("title");
 //     let a = (nombreIngresado === "") ? myTytle.innerHTML = `No ingresaste los datos solicitados` : myTytle.innerHTML = `Buenos dias ${nombreIngresado}, ${lugar}`
 // }
-  
 // function mostrarInputs()
 //   {
 //     saludar();

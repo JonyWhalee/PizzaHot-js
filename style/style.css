@@ -20,7 +20,11 @@
 body{
     background-color: #000;
 }
-
+/* Comienzo de Nav */
+header{
+    width: 100%;
+    transition: 0.7;
+}
 nav{
     display: flex;
     justify-content: space-around;
@@ -33,10 +37,13 @@ nav{
     width: 100%;
 }
 .logo{
-
     color: var(--color6);
     font-size: 20px;
 }
+.logo a{
+    text-decoration: none;
+}
+
 .logo span{
     color: #f3f3f3df;
 }
@@ -57,6 +64,7 @@ nav{
     height: 700px;
     top: 100px;
     background-color: var(--color1);
+    z-index: 10;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -99,20 +107,52 @@ nav{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Fin de Nav */
+/* Comienzo de Slider */
+.container-slider{
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.slider{
+    display: flex;
+    width: 400%;
+    height: 800px;
+    margin-left: -100%;
+}
+.slider__section{
+    width: 100%;
+}
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider__btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: var(--color1);
+    color: var(--color6);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.slider__btn:hover{ 
+    border: var(--color6) solid 2px;
+}
+.slider__btn--left{
+    left: 10px;
+}
+.slider__btn--right{
+    right: 10px;
+}
 
 
 /* .btn {
