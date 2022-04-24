@@ -10,8 +10,6 @@ let btnRight = document. querySelector("#btn-right");
 slider.insertAdjacentElement('afterbegin', sliderSectionLast);
 // Solucionado
 
-
-
 // El insertAdjacentElement de abajo, retorna un error en el elemento. Porque sliderSectionFirst y sliderSectionLast retorna undefined
 
 function right(){

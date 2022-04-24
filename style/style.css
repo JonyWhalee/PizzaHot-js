@@ -17,8 +17,24 @@
     overflow-x: hidden;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 7px;   
+    background: var(--color1);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, var(--color2));
+    border-radius: 2px;
+}
+
 body{
     background-color: #010101;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Comienzo de Nav */
@@ -40,13 +56,16 @@ nav{
     width: 100%;
 }
 
-.logo{
-    color: var(--color6);
-    font-size: 20px;
-}
-
 .logo a{
     text-decoration: none;
+    color: var(--color6);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.logo:hover{
+    transform: scale(1.09);
 }
 
 .logo span{
@@ -63,6 +82,10 @@ nav{
     font-weight: 900;
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: all 1s;
+}
+.nav-links a:hover{
+    transform: scale(1.9);
 }
 
 .nav-links{
@@ -92,7 +115,14 @@ nav{
     background-color: var(--color3);
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s ease ;
+    transition: all 0.3s ease;
+}
+.menu-burger{
+    transition: all 1s;
+}
+.menu-burger:hover{   
+    transform: scale(1.2);
+
 }
 
 .nav-active{
@@ -157,23 +187,26 @@ nav{
     background: var(--color1);
     color: var(--color6);
     top: 50%;
-    transform: translateY(-50%);
     font-size: 30px;
     font-family: monospace;
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
-    border: #000 solid 2px;
 }
-
-
-
 .slider__btn--left{
     left: 10px;
+    transition: all 1s;
 }
-
+.slider__btn--left:hover{
+    transform: scale(1.2);
+    transition: all 1s;
+}
 .slider__btn--right{
     right: 10px;
+}
+.slider__btn--right:hover{
+    transform: scale(1.2);
+    transition: all 1s;
 }
 
 /* .btn {
@@ -198,3 +231,96 @@ nav{
     list-style: none;
     margin: 30px;
 } */
+
+
+/* Empieza footer */
+.footer-pag{
+    width: 100%;
+    background-color: var(--color1);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.segment-one{
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 40px 0px;
+}
+
+.segment-one{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.segment-one .logo-footer{
+    text-decoration: none;
+    color: var(--color6);
+    font-size: 35px;
+}
+.segment-one .logo-footer span{
+    color: var(--color2);
+}
+.segment-one .box h2{
+    color:  var(--color5);
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
+.segment-one .box p{
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+.segment-one .networks a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: grey;
+    text-align: center;
+    transition: all 1s;
+    border-radius: 10px;
+    font-size: 25px;
+}
+.segment-two{
+    background-color: var(--color5);
+    color: var(--color1);
+    font-size: 12px;
+    text-align: center;
+}
+.facebook {
+    transition: all 1s;
+}
+.facebook:hover{
+    color: #3b5998;
+    transform: scale(1.2);
+}
+.instagram {
+    transition: all 1s;
+}
+.instagram:hover{
+    background: radial-gradient(circle at 33% 100%,#fed373 4%,#f15245 30%,#d92e7f 62%,#9b36b7 85%,#515ecf);
+    transform: scale(1.4);
+    border-radius: 40px;
+}
+.twitter{
+    transition: all 1s;
+}
+.twitter:hover{
+    color:  #00acee;
+    transform: scale(1.4);
+}
+.linkedin {
+    transition: all 1s;
+}
+.linkedin:hover{
+    color: #2561A9;
+    transform: scale(1.2);
+}
