@@ -10,21 +10,24 @@
     --color6: #ffd06c;
 }
 
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
 }
+
 body{
-    background-color: #000;
+    background-color: #010101;
 }
+
 /* Comienzo de Nav */
+
 header{
     width: 100%;
     transition: 0.7;
 }
+
 nav{
     display: flex;
     justify-content: space-around;
@@ -36,10 +39,12 @@ nav{
     font-weight: 900;
     width: 100%;
 }
+
 .logo{
     color: var(--color6);
     font-size: 20px;
 }
+
 .logo a{
     text-decoration: none;
 }
@@ -51,6 +56,7 @@ nav{
 .nav-links li{
     list-style: none;
 }
+
 .nav-links a{
     color: #f3f3f3df;
     text-decoration: none;
@@ -58,6 +64,7 @@ nav{
     font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 .nav-links{
     position: absolute;
     right: 0px;
@@ -73,9 +80,11 @@ nav{
     transform: translateX(100%);  
     transition: transform 0.5s ease-in;  
 }
+
 .nav-links li{
     opacity: 0;
 }
+
 .menu-burger div{
     width: 25px;
     height: 3px;
@@ -85,9 +94,11 @@ nav{
     cursor: pointer;
     transition: all 0.3s ease ;
 }
+
 .nav-active{
     transform: translateX(0%);
 }
+
 @keyframes navLinkFade{
     from{
         opacity: 0;
@@ -98,38 +109,47 @@ nav{
         transform: translateX(0px);
     }
 }
+
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
 }
+
 .toggle .line2{ 
     opacity: 0;
 }
+
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
+
 /* Fin de Nav */
 /* Comienzo de Slider */
+
 .container-slider{
     max-width: 90%;
     margin: auto;
     overflow: hidden;
     position: relative;
 }
+
 .slider{
     display: flex;
     width: 400%;
     height: 800px;
     margin-left: -100%;
 }
+
 .slider__section{
     width: 100%;
 }
+
 .slider__img{
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .slider__btn{
     position: absolute;
     width: 40px;
@@ -143,17 +163,18 @@ nav{
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
+    border: #000 solid 2px;
 }
-.slider__btn:hover{ 
-    border: var(--color6) solid 2px;
-}
+
+
+
 .slider__btn--left{
     left: 10px;
 }
+
 .slider__btn--right{
     right: 10px;
 }
-
 
 /* .btn {
     display: inline-block;
