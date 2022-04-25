@@ -1,34 +1,69 @@
+(async ()=>{ 
+    let {value:localidad} = await swal.fire({
+        title:'Bienvenido!',
+        text:'Selecciona tu localidad',
+        icon:'question',
+        color:'white',
+        confirmButtonText: 'Seleccionar',
+        background: '#242422',
+        confirmButtonColor:'#83A8B8',
+        padding:'1rem',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+        stopKeydownPropagation: true,
+        input: 'select',
+        inputPlaceholder:'Nombre de tu Localidad',
+        inputValue:'',
+        inputOptions: {
+            Alberdi: 'Alberdi',
+            Balcarce: 'Balcarce',
+            CiudadDeBuenosAires: 'Cuidad de Buenos Aires',
+            Dolores: 'Dolores',
+            Ezeiza: 'Ezeiza',
+            FlorentinoAmeghino: 'Florentino Ameghino',
+            GeneralRodriguez: 'Gueneral Rodriguez',
+            Huanguelen: 'Huanguelen',
+            Junin: 'JAJAJA sos de Junin',
+            LaPlata:'La Plata',
+            MardelPlata: 'Mar del Plata',
+            Necochea: 'Necochea',
+            Olavarria: 'Olavarria',
+            Pinamar: 'Pinamar',
+            Quilmes: 'Quilmes',
+            Rivadavia: 'Rivadavia',
+            SanIsidro: 'San Isidro',
+            Tandil: 'Tandil',
+            Tigre: 'Tigre',
+            VillaGesell: 'Villa Gesell',
+            Zarate:'Zarate'
+        }})
+        if(localidad){
+            Toastify({
+                text:`Has seleccionado ${localidad} 😍`,
+                duration: 4000,
+            }).showToast();
+        }
+})()
+
+
+
+
 // init();
 
 // function init()
 // {
-//   mensaje();
-//   botonMenor();
-//   botonMayor();
-//   mostrarPizzas();
+//     saludar();
+//     // mensaje();
+//     // botonMenor();
+//     // botonMayor();
+//     // mostrarPizzas();
 
-// }
-// let lugar = " ";
-
-// function opcionId3()
-//   {
-//     lugar = "asi que va a llevarse el pedido. Genial!!";
-//   }
-// function opcionId4()
-//   {
-//     lugar = `buenisimo asi que van a comer acá. Siganme!`;
-//   }
-
-// function saludar()
-//   {
-//     let nombreIngresado = document.getElementById("id1").value;
-//     let myTytle = document.getElementById("title");
-//     let a = (nombreIngresado === "") ? myTytle.innerHTML = `No ingresaste los datos solicitados` : myTytle.innerHTML = `Buenos dias ${nombreIngresado}, ${lugar}`
 // }
 // function mostrarInputs()
-//   {
-//     saludar();
-//   }
+//     {
+//         saludar();
+//     }
 
 // function mensaje()
 //   {

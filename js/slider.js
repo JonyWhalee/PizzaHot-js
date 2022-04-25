@@ -16,24 +16,24 @@ function right(){
     let sliderSectionFirst = document.querySelectorAll("#slider__selection")[0];
     // LO ARREGLEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE. Bueno mas o menos / anda "mejor"
     slider.style.marginLeft = "-200%";
-    slider.style.transition = "all 0.7s"
+    slider.style.transition = "all 1s"
     setTimeout(()=>{
         slider.style.transition = "none"
         slider.insertAdjacentElement('beforeend', sliderSectionFirst);
         slider.style.marginLeft = "-100%";
         // AHORAAAAAA SIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII VAVAVA
-    }, 700);
+    }, 1000);
 }
 function left(){
     let sliderSection = document.querySelectorAll("#slider__selection");
     let sliderSectionLast = sliderSection[sliderSection.length -1];
     slider.style.marginLeft = "0";
-    slider.style.transition = "all 0.7s"
+    slider.style.transition = "all 1s"
     setTimeout(()=>{
         slider.style.transition = "none"
         slider.insertAdjacentElement('afterbegin', sliderSectionLast);
         slider.style.marginLeft = "-100%";
-    }, 700);
+    }, 1000);
 }
 
 btnRight.addEventListener("click", ()=>{
@@ -46,5 +46,5 @@ btnLeft.addEventListener("click", ()=>{
 
 setInterval(() => {
     right();
-}, 5000);
+}, 7000);
 

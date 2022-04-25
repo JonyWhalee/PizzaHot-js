@@ -56,16 +56,19 @@ nav{
     width: 100%;
 }
 
-.logo a{
-    text-decoration: none;
-    color: var(--color6);
-    font-size: 20px;
+.logo{
     cursor: pointer;
     transition: all 1s;
 }
 
 .logo:hover{
     transform: scale(1.09);
+}
+
+.logo a{
+    text-decoration: none;
+    color: var(--color6);
+    font-size: 20px;
 }
 
 .logo span{
@@ -80,8 +83,8 @@ nav{
     color: #f3f3f3df;
     text-decoration: none;
     font-weight: 900;
-    font-size: 18px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     transition: all 1s;
 }
 .nav-links a:hover{
@@ -91,15 +94,15 @@ nav{
 .nav-links{
     position: absolute;
     right: 0px;
-    height: 700px;
+    height: 500px;
     top: 100px;
     background-color: var(--color1);
-    z-index: 10;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 30%;
+    width: 25%;
     transform: translateX(100%);  
     transition: transform 0.5s ease-in;  
 }
@@ -202,11 +205,11 @@ nav{
     transition: all 1s;
 }
 .slider__btn--right{
+    transition: all 1s;
     right: 10px;
 }
 .slider__btn--right:hover{
     transform: scale(1.2);
-    transition: all 1s;
 }
 
 /* .btn {
@@ -234,11 +237,13 @@ nav{
 
 
 /* Empieza footer */
+
 .footer-pag{
     width: 100%;
     background-color: var(--color1);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .segment-one{
     width: 100%;
     margin: auto;
@@ -258,7 +263,7 @@ nav{
 .segment-one .logo-footer{
     text-decoration: none;
     color: var(--color6);
-    font-size: 35px;
+    font-size: 30px;
 }
 .segment-one .logo-footer span{
     color: var(--color2);
@@ -272,7 +277,7 @@ nav{
     cursor: pointer;
 }
 .segment-one .box p{
-    opacity: 0.9;
+    opacity: 0.6;
     margin-bottom: 10px;
 }
 .segment-one .networks a{
@@ -294,6 +299,7 @@ nav{
     color: var(--color1);
     font-size: 12px;
     text-align: center;
+    cursor: pointer;
 }
 .facebook {
     transition: all 1s;
@@ -323,4 +329,11 @@ nav{
 .linkedin:hover{
     color: #2561A9;
     transform: scale(1.2);
+}
+/* Termina Footer */
+
+/* alert sweet */
+/* pasa solucionar el scroll horizontal */
+.swal2-success{
+    overflow: hidden;
 }
