@@ -6,7 +6,7 @@ function init()
     mensaje();
     // botonMenor();
     // botonMayor();
-    // mostrarPizzas();
+    mostrarPizzas();
 
 }
 
@@ -60,9 +60,37 @@ function mensaje(){
             cursorChar:'|',
             contentType: 'html'
     });
-
 }
 
+function mostrarPizzas(){
+    let items = document.querySelector('#items');
+    let templaceCard = document.querySelector('#template-card').content;
+    let fragment = document.createDocumentFragment();
+
+    document.addEventListener('DOMContentLoaded',()=>{
+        fetchData();
+    })
+    let fetchData = async() =>{
+        try{
+            let res = await fetch('api.json');
+            let data = await res.json();
+            pintarCards(data);
+        } catch (error){
+            console.log(error);
+        }
+    }
+    let pintarCards = data =>{
+        data.forEach(pizza => {
+            templaceCard.querySelector('#title-card').textContent = pizza.nombre;
+            templaceCard.querySelector('#precio-card').textContent = pizza.precio;
+            templaceCard.querySelector('.card-img-top').setAttribute("src", pizza.img);
+            templaceCard.querySelector('.btn-dark').dataset.id = pizza.id;
+            let clone = templaceCard.cloneNode(true);
+            fragment.appendChild(clone);
+        });
+        items.appendChild(fragment);
+    }
+}
 
 
 

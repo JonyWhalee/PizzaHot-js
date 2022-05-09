@@ -1,0 +1,74 @@
+[
+    {   
+        "id":1,
+        "nombre":"Napolitana",
+        "precio": 1650,
+        "img":"https://www.cocinayvino.com/wp-content/uploads/2018/08/pizza-napolitana-2-e1534286138178-1200x675.jpg"
+    },
+    {
+        "id":2, 
+        "nombre":"Hawaiana",
+        "precio": 1200, 
+        "img":"http://cdn.shopify.com/s/files/1/0247/8768/1379/products/Productos-e-commerse_pizzas-hawaiana_1200x1200.png?v=1628782435"
+    },
+    {
+        "id":3, 
+        "nombre":"4 Quesos", 
+        "precio": 1400, 
+        "img":"https://recetinas.com/wp-content/uploads/2018/03/pizza-4-quesos.jpg"
+    },
+    {
+        "id":4, 
+        "nombre":"Calabresa", 
+        "precio": 1170, 
+        "img":"https://placeralplato.com/files/2016/01/Pizza-con-pepperoni.jpg"
+    },
+    {
+        "id":5, 
+        "nombre":"Jamon y Panceta", 
+        "precio": 1300, 
+        "img":"https://enjoypizza.files.wordpress.com/2015/07/panceta.jpg"
+    },
+    {
+        "id":6, 
+        "nombre":"Margarita", 
+        "precio": 1110, 
+        "img":"https://www.hola.com/imagenes/cocina/recetas/20190911149183/pizza-margarita/0-717-935/pizza-m.jpg"
+    },
+    {
+        "id":7, 
+        "nombre":"Carbonara", 
+        "precio": 1500, 
+        "img":"https://www.comedera.com/wp-content/uploads/2022/04/pizza-carbonara-500x375.jpg"
+    },
+    {
+        "id":8, 
+        "nombre":"4 Estaciones", 
+        "precio": 1290, 
+        "img": "https://babycocina.com/wp-content/uploads/2020/02/pizza-4-estaciones.png"
+    },
+    {
+        "id":9, 
+        "nombre":"Calzone", 
+        "precio": 1800, 
+        "img": "https://okdiario.com/img/recetas/2017/07/12/pizza-calzone-3.jpg"
+    },
+    {
+        "id":10, 
+        "nombre":"Barbacoa", 
+        "precio": 1250, 
+        "img": "https://www.comedera.com/wp-content/uploads/2022/04/pizza-barbacoa.jpg"
+    },
+    {
+        "id":11, 
+        "nombre":"Diávola", 
+        "precio": 1450, 
+        "img": "https://www.silviocicchi.com/pizzachef/wp-content/uploads/2015/03/d2.jpg"
+    },
+    {
+        "id":12, 
+        "nombre":"Portuguesa", 
+        "precio": 1850, 
+        "img": "https://img.freepik.com/foto-gratis/pizza-portuguesa-huevos-duros-cebolla-aceitunas-sobre-tabla-madera-verduras-fondo_491130-1736.jpg"
+    }
+]

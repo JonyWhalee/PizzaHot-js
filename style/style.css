@@ -59,6 +59,8 @@ nav{
 .logo{
     cursor: pointer;
     transition: all 1s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
 }
 
 .logo:hover{
@@ -68,7 +70,9 @@ nav{
 .logo a{
     text-decoration: none;
     color: var(--color6);
-    font-size: 20px;
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
 }
 
 .logo span{
@@ -192,9 +196,11 @@ nav{
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
+    overflow: hidden;
 }
 .slider__btn--left{
     left: 10px;
+    line-height: 1.2;
     transition: all 1s;
 }
 .slider__btn--left:hover{
@@ -204,6 +210,7 @@ nav{
 .slider__btn--right{
     transition: all 1s;
     right: 10px;
+    line-height: 1.2;
 }
 .slider__btn--right:hover{
     transform: scale(1.2);
@@ -224,9 +231,18 @@ nav{
     font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 900;
+    margin-top: 70px;
+    text-align: center;
 }
 
 /* Fin typed */
+/* inicio carrito */
+.card{
+    color: #000;
+}
+.card-img-top{
+    height: 250px;
+}
 /* Empieza footer */
 
 .footer-pag{
@@ -255,6 +271,8 @@ nav{
     text-decoration: none;
     color: var(--color6);
     font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
 }
 .segment-one .logo-footer span{
     color: var(--color2);
@@ -266,6 +284,8 @@ nav{
     text-transform: uppercase;
     text-align: center;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
 }
 .segment-one .box p{
     opacity: 0.6;
@@ -291,6 +311,9 @@ nav{
     font-size: 12px;
     text-align: center;
     cursor: pointer;
+    line-height: 2.5;
+    height: 30px;
+    overflow: hidden;
 }
 .facebook {
     transition: all 1s;
