@@ -83,13 +83,10 @@ nav{
     color: #f3f3f3df;
     text-decoration: none;
     font-weight: 900;
-    font-size: 16px;
+    font-size: 17px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: all 1s;
 }
-.nav-links a:hover{
-    transform: scale(1.9);
-}
+
 
 .nav-links{
     position: absolute;
@@ -211,31 +208,25 @@ nav{
 .slider__btn--right:hover{
     transform: scale(1.2);
 }
-
-/* .btn {
-    display: inline-block;
-    background-color: #494848;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 1s;
+/* Fin slider */
+/* Comienza typed */
+.container-text{
+    width: 100%;
+    height: 300px;
+    padding: 20px;
 }
-.btn:hover {
-    transform: scale(1.07);
-    transition: all 1s;
-    opacity: 0.8;
+.container-text .pizza-t{
+    font-weight: 900;
+    color: var(--color6);
+    font-style: normal;
 }
-.photo{
-    height: 200px;
-    width: 250px;
+.title-typed{
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
 }
-#listaPizzeria{
-    list-style: none;
-    margin: 30px;
-} */
 
-
+/* Fin typed */
 /* Empieza footer */
 
 .footer-pag{
@@ -331,22 +322,3 @@ nav{
     transform: scale(1.2);
 }
 /* Termina Footer */
-
-/* alert sweet */
-/* pasa solucionar el scroll horizontal */
-.swal2-success{
-    overflow: hidden;
-}
-/* Comienzo PizzaFree */
-/* .container-free{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pizzafree{
-    background-color: red;
-    width: 100vh;
-    height: 100vh;
-    text-align: center;
-     */
-/* } */

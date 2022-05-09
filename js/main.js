@@ -3,7 +3,7 @@ init();
 function init()
 {
     saludar();
-    // mensaje();
+    mensaje();
     // botonMenor();
     // botonMayor();
     // mostrarPizzas();
@@ -25,44 +25,50 @@ function saludar(){
             allowEscapeKey: false,
             allowEnterKey: false,
             stopKeydownPropagation: true,
-            input: 'select',
+            input: 'text',
             inputPlaceholder:'Nombre de tu Localidad',
-            inputValue:'',
-            inputOptions: {
-                Alberdi: 'Alberdi',
-                Balcarce: 'Balcarce',
-                Banfield:'Banfield',
-                CiudadDeBuenosAires: 'Cuidad de Buenos Aires',
-                Dolores: 'Dolores',
-                Ezeiza: 'Ezeiza',
-                FlorentinoAmeghino: 'Florentino Ameghino',
-                GeneralRodriguez: 'Gueneral Rodriguez',
-                Huanguelen: 'Huanguelen',
-                Junin: 'Junin',
-                LaPlata:'La Plata',
-                LomasDeZamora:'Lomas De Zamora',
-                MardelPlata: 'Mar del Plata',
-                Necochea: 'Necochea',
-                Olavarria: 'Olavarria',
-                Pinamar: 'Pinamar',
-                Quilmes: 'Quilmes',
-                Rivadavia: 'Rivadavia',
-                SanIsidro: 'San Isidro',
-                Tandil: 'Tandil',
-                Tigre: 'Tigre',
-                VillaGesell: 'Villa Gesell',
-                Zarate:'Zarate'
-            }})
+            inputValue:''})
             setTimeout(()=>{
                 if(localidad){
                     Toastify({
-                        text:`Has seleccionado ${localidad} 😍`,
+                        text:`Eres de ${localidad} 😍`,
+                        duration: 3000,
+                    }).showToast();
+                }
+                else{
+                    Toastify({
+                        text:`No me dijiste tu localidad 🥺`,
                         duration: 3000,
                     }).showToast();
                 }
             }, 1000)
     })()
 }
+
+function mensaje(){
+    let typed = new Typed('.typed', {
+            stringsElement: '#cadena-text',
+            typeSpeed: 75,
+            startDelay: 300, 
+            backSpeed: 75,
+            smartBackspace: true,
+            shuffle: false,
+            backDelay: 1500,
+            loop: true,
+            loopCount: false,
+            showCursor:true,
+            cursorChar:'|',
+            contentType: 'html'
+    });
+
+}
+
+
+
+
+
+
+
 
 // let  url = `https://fedeperin-harry-potter-api.herokuapp.com/personajes`;
 
@@ -80,35 +86,28 @@ function saludar(){
 //     });
 
 // }
-let url = 'https://jsonplaceholder.typicode.com/users';
+// let url = 'https://jsonplaceholder.typicode.com/users';
 
-    fetch(url)
-    .then((res)=>res.json())
-    .then((data)=>{
-        mostrarDatos(data);
-    });
+//     fetch(url)
+//     .then((res)=>res.json())
+//     .then((data)=>{
+//         mostrarDatos(data);
+//     });
 
-    function mostrarDatos(data)
-    {
-        let nodo = document.querySelector("#usuarios");
-        data.forEach(element=>{
-            const div = document.createElement("div");
-            div.innerHTML=`<p>${element.name}</p><br><br>${element.email}`
-            nodo.appendChild(div);
-        });
-    }
+//     function mostrarDatos(data)
+//     {
+//         let nodo = document.querySelector("#usuarios");
+//         data.forEach(element=>{
+//             const div = document.createElement("div");
+//             div.innerHTML=`<p>${element.name}</p><br><br>${element.email}`
+//             nodo.appendChild(div);
+//         });
+//     }
 
 // function mostrarInputs()
 //     {
 //         saludar();
 //     }
-
-// function mensaje()
-//   {
-//     let mensaje = document.createElement("p");
-//     mensaje.innerHTML = `Acá tienes todas las opcciones del dia de hoy!`
-//     document.body.appendChild(mensaje);
-//   }
 
 // function botonMenor()
 //   {

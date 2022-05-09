@@ -20,18 +20,4 @@ let burger_nav = ()=>{
 burger_nav();
 // Fin burger_nav
 
-// FreePizza
-
-
-
-
-    // let width = window.innerWidth;
-    // let height = window.innerHeight;
-    // let newWidth = (Math.random() * width);
-    // let newHeight = (Math.random() * height);
-
-    // document.querySelector('#btnyes').style.position = 'absolute';
-    // document.querySelector('#btnyes').style.left = newWidth + "px";
-    // document.querySelector('#btnyes').style.top = newHeight + "px";
-
 
