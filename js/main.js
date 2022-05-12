@@ -130,9 +130,10 @@ let btnAccion = pizza=>{
     }
     pizza.stopPropagation();
 }
+
 init();
-function init(){
-    saludar();
+
+function init(){ 
     mensaje();
 }
 
@@ -168,8 +169,16 @@ function saludar(){
                     }).showToast();
                 }
             }, 1000)
+        
+        localStorage.setItem('localidadUsuario', localidad); 
     })()
 }
+(()=>{
+    let localidadUsuario = localStorage.getItem('localidadUsuario');
+    if (localidadUsuario === null){
+        saludar();
+    }
+})();
 
 function mensaje(){
     let typed = new Typed('.typed', {
