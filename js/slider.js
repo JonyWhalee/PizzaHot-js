@@ -40,5 +40,5 @@ btnLeft.addEventListener("click", ()=>{
 
 setInterval(() => {
     right();
-}, 7000);
+}, 10000);
 

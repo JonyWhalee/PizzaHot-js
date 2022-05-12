@@ -132,7 +132,7 @@ let btnAccion = pizza=>{
 }
 init();
 function init(){
-    // saludar();
+    saludar();
     mensaje();
 }
 
@@ -157,13 +157,13 @@ function saludar(){
             setTimeout(()=>{
                 if(localidad){
                     Toastify({
-                        text:`Eres de ${localidad} 😍`,
+                        text:`No lo puedo creer, eres de "${localidad}" 😍😍`,
                         duration: 3000,
                     }).showToast();
                 }
                 else{
                     Toastify({
-                        text:`No me dijiste tu localidad 🥺`,
+                        text:`No me dijiste de donde eres... 🥺🥺`,
                         duration: 3000,
                     }).showToast();
                 }
