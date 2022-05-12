@@ -233,6 +233,7 @@ nav{
     font-weight: 900;
     margin-top: 70px;
     text-align: center;
+    cursor: pointer;
 }
 
 /* Fin typed */
@@ -243,6 +244,45 @@ nav{
 .card-img-top{
     height: 250px;
 }
+.card{
+    border: none;
+    border-radius: 10px;
+    text-align:center;
+}
+.card-body{
+    background-color: var(--color4);
+}
+.btn-dark{
+    transition: all 1s;
+    /* background-color: var(--color1);
+    */
+    border: none;  
+    border-radius: 10px;
+}
+.btn-dark:hover{
+    transform: scale(1.07);
+    color: var(--color6);
+}
+.table{
+    color: #fff;
+}
+.btn-info{
+    padding: 3px 10px;
+    font-size: 16px;
+}
+.btn-danger{
+    padding: 3px 10px;
+    font-size: 16px;
+}
+.text-bug{
+    text-align: center;
+} 
+.precio-bug{
+    position: absolute;
+}
+
+/* fin carrito */
+
 /* Empieza footer */
 
 .footer-pag{
@@ -299,7 +339,7 @@ nav{
     line-height: 45px;
     color: #fff;
     margin-right: 10px;
-    background-color: grey;
+    background-color: #494848;
     text-align: center;
     transition: all 1s;
     border-radius: 10px;
