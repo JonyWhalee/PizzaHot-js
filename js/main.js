@@ -17,11 +17,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     
 cards.addEventListener('click', pizza =>{
     addCarrito(pizza);
-    // //   
-    Toastify({
-        text:`Agregaste un producto al carrito!`,
-        duration: 3000,
-    }).showToast();
 })
 
 
@@ -54,9 +49,13 @@ let pintarCards = data =>{
 let addCarrito = pizza =>{
 
     if(pizza.target.classList.contains('btn-dark')){
-        setCarrito(pizza.target.parentElement)
+        setCarrito(pizza.target.parentElement);
+        Toastify({
+            text:`Agregaste una 🍕🍕 al carrito!`,
+            duration: 2000,
+        }).showToast();
     }
-    pizza.stopPropagation()
+    pizza.stopPropagation();
 }
 
 let setCarrito = objeto =>{

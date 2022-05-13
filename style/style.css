@@ -64,7 +64,7 @@ nav{
 }
 
 .logo:hover{
-    transform: scale(1.09);
+    transform: scale(1.07);
 }
 
 .logo a{
@@ -125,7 +125,7 @@ nav{
     transition: all 1s;
 }
 .menu-burger:hover{   
-    transform: scale(1.2);
+    transform: scale(1.09);
 
 }
 
@@ -204,8 +204,9 @@ nav{
     transition: all 1s;
 }
 .slider__btn--left:hover{
-    transform: scale(1.2);
+    transform: scale(1.09);
     transition: all 1s;
+    background-color: #494848;
 }
 .slider__btn--right{
     transition: all 1s;
@@ -213,7 +214,8 @@ nav{
     line-height: 1.2;
 }
 .slider__btn--right:hover{
-    transform: scale(1.2);
+    transform: scale(1.09);
+    background-color: #494848;
 }
 /* Fin slider */
 /* Comienza typed */
