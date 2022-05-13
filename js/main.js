@@ -17,6 +17,11 @@ document.addEventListener('DOMContentLoaded',()=>{
     
 cards.addEventListener('click', pizza =>{
     addCarrito(pizza);
+    // //   
+    Toastify({
+        text:`Agregaste un producto al carrito!`,
+        duration: 3000,
+    }).showToast();
 })
 
 
@@ -108,6 +113,10 @@ let pintarFooter = ()=>{
     btnVaciarCarrito.addEventListener('click', ()=>{
         carrito = {};
         pintarCarrito();
+        Toastify({
+            text:`Vaciaste el carrito!`,
+            duration: 3000,
+        }).showToast();
     })
 }
 
